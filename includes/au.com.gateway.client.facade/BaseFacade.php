@@ -24,8 +24,8 @@ abstract class BaseFacade {
             echo '<div class="col-lg-10 col-lg-offset-1"><div class="alert alert-success" role="alert"><strong>Response</strong> ' . $jsonResponse .'</div></div>';
             
             //email Receipt
-            $to = $jsonResponse['extraData']['customer_email'];
-            $subject = "Payment Received - ". $jsonResponse['extraData']['txnReference'];
+            $to = $jsonResponse['responseData']['extraData']['customer_email'];
+            $subject = "Payment Received - ". $jsonResponse['responseData']['extraData']['txnReference'];
             $message = "This is a test email sent using PHP's mail() function.";
             $headers = "From: sender@example.com"; // You can add other headers like Cc or Bcc here
 
